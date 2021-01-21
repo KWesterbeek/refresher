@@ -1,0 +1,88 @@
+* { margin: 0; padding: 0; }
+
+body {
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size:xx-large;
+    display: flex;
+    justify-content: center;
+    color: #555;
+}
+
+card {
+    margin: 50px 10px;
+    width: 600px;
+    height: 350px;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px rgb(233, 233, 233);
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 30% 40% 30%;
+    grid-template-areas: 
+        "n n n n n p"
+        "m m m m m m"
+        "a a a a a a"
+    ;
+}
+
+card > * {
+    padding: 15px 20px;
+}
+
+card member {
+    grid-area: n;
+}
+
+card img {
+    grid-area: p;
+    width: 75px;
+}
+
+card message {
+    grid-area: m;
+}
+
+card actions {
+    grid-area: a;
+    border-top: 1px solid lightgray;
+    display: flex;
+    justify-content: center;
+}
+
+member p:first-child {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: black;
+}
+
+member p:nth-child(2) {
+    color: gray;
+}
+
+strong {
+    font-weight: bold;
+}
+
+button {
+    text-align: center;  
+    cursor: pointer;
+    flex-grow: 1;
+    height: 70px;
+    background-color: white;
+    font: inherit;
+}
+
+.approve {
+    margin-right: -5px;
+    border: 2px solid rgb(0, 199, 0);
+    border-radius: 7px 0px 0px 7px;
+    color: rgb(0, 199, 0);
+  }
+
+
+.decline {
+    margin-left: -5px;
+    border: 2px solid red;
+    border-radius: 0px 7px 7px 0px;
+    color: red;
+}
